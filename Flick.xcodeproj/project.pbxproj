@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		591F30EB1C55B07A00B6DB6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591F30EA1C55B07A00B6DB6B /* AppDelegate.swift */; };
-		591F30ED1C55B07A00B6DB6B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591F30EC1C55B07A00B6DB6B /* ViewController.swift */; };
 		591F30F01C55B07A00B6DB6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 591F30EE1C55B07A00B6DB6B /* Main.storyboard */; };
 		591F30F21C55B07A00B6DB6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 591F30F11C55B07A00B6DB6B /* Assets.xcassets */; };
 		591F30F51C55B07A00B6DB6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 591F30F31C55B07A00B6DB6B /* LaunchScreen.storyboard */; };
 		591F31001C55B07A00B6DB6B /* FlickTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591F30FF1C55B07A00B6DB6B /* FlickTests.swift */; };
 		591F310B1C55B07A00B6DB6B /* FlickUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591F310A1C55B07A00B6DB6B /* FlickUITests.swift */; };
+		591F31191C55B34E00B6DB6B /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591F31181C55B34E00B6DB6B /* MoviesViewController.swift */; };
+		591F311C1C55BD9600B6DB6B /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591F311B1C55BD9600B6DB6B /* MovieCell.swift */; };
+		D49D22AD4B0B70B9165A84B9 /* Pods_Flick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ADA547F59791F1E01F56BDF /* Pods_Flick.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +36,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4786C35190EB708B82079B33 /* Pods-Flick.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flick.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Flick/Pods-Flick.debug.xcconfig"; sourceTree = "<group>"; };
+		4ADA547F59791F1E01F56BDF /* Pods_Flick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Flick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		591F30E71C55B07A00B6DB6B /* Flick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flick.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		591F30EA1C55B07A00B6DB6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		591F30EC1C55B07A00B6DB6B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		591F30EF1C55B07A00B6DB6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		591F30F11C55B07A00B6DB6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		591F30F41C55B07A00B6DB6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +50,9 @@
 		591F31061C55B07A00B6DB6B /* FlickUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlickUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		591F310A1C55B07A00B6DB6B /* FlickUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickUITests.swift; sourceTree = "<group>"; };
 		591F310C1C55B07A00B6DB6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		591F31181C55B34E00B6DB6B /* MoviesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
+		591F311B1C55BD9600B6DB6B /* MovieCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		61EA4AE51D774E10E3C17D84 /* Pods-Flick.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flick.release.xcconfig"; path = "Pods/Target Support Files/Pods-Flick/Pods-Flick.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D49D22AD4B0B70B9165A84B9 /* Pods_Flick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +88,8 @@
 				591F30FE1C55B07A00B6DB6B /* FlickTests */,
 				591F31091C55B07A00B6DB6B /* FlickUITests */,
 				591F30E81C55B07A00B6DB6B /* Products */,
+				C7D744155ECB7E24FF8F08BE /* Pods */,
+				684630A1EA28D1B11056C615 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,8 +106,9 @@
 		591F30E91C55B07A00B6DB6B /* Flick */ = {
 			isa = PBXGroup;
 			children = (
+				591F311D1C55BD9C00B6DB6B /* view controllers */,
+				591F311A1C55BD6F00B6DB6B /* Views */,
 				591F30EA1C55B07A00B6DB6B /* AppDelegate.swift */,
-				591F30EC1C55B07A00B6DB6B /* ViewController.swift */,
 				591F30EE1C55B07A00B6DB6B /* Main.storyboard */,
 				591F30F11C55B07A00B6DB6B /* Assets.xcassets */,
 				591F30F31C55B07A00B6DB6B /* LaunchScreen.storyboard */,
@@ -125,6 +135,39 @@
 			path = FlickUITests;
 			sourceTree = "<group>";
 		};
+		591F311A1C55BD6F00B6DB6B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				591F311B1C55BD9600B6DB6B /* MovieCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		591F311D1C55BD9C00B6DB6B /* view controllers */ = {
+			isa = PBXGroup;
+			children = (
+				591F31181C55B34E00B6DB6B /* MoviesViewController.swift */,
+			);
+			name = "view controllers";
+			sourceTree = "<group>";
+		};
+		684630A1EA28D1B11056C615 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4ADA547F59791F1E01F56BDF /* Pods_Flick.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C7D744155ECB7E24FF8F08BE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4786C35190EB708B82079B33 /* Pods-Flick.debug.xcconfig */,
+				61EA4AE51D774E10E3C17D84 /* Pods-Flick.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +175,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 591F310F1C55B07A00B6DB6B /* Build configuration list for PBXNativeTarget "Flick" */;
 			buildPhases = (
+				2052E8D6033DE069A52DF569 /* Check Pods Manifest.lock */,
 				591F30E31C55B07A00B6DB6B /* Sources */,
 				591F30E41C55B07A00B6DB6B /* Frameworks */,
 				591F30E51C55B07A00B6DB6B /* Resources */,
+				98109FECE18013E17FAACFEC /* Embed Pods Frameworks */,
+				58BF2671A35AF9288EE2F644 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -251,13 +297,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2052E8D6033DE069A52DF569 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		58BF2671A35AF9288EE2F644 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Flick/Pods-Flick-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		98109FECE18013E17FAACFEC /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Flick/Pods-Flick-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		591F30E31C55B07A00B6DB6B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				591F30ED1C55B07A00B6DB6B /* ViewController.swift in Sources */,
 				591F30EB1C55B07A00B6DB6B /* AppDelegate.swift in Sources */,
+				591F31191C55B34E00B6DB6B /* MoviesViewController.swift in Sources */,
+				591F311C1C55BD9600B6DB6B /* MovieCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,6 +492,7 @@
 		};
 		591F31101C55B07A00B6DB6B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4786C35190EB708B82079B33 /* Pods-Flick.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Flick/Info.plist;
@@ -408,6 +504,7 @@
 		};
 		591F31111C55B07A00B6DB6B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61EA4AE51D774E10E3C17D84 /* Pods-Flick.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Flick/Info.plist;
@@ -484,6 +581,7 @@
 				591F31111C55B07A00B6DB6B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		591F31121C55B07A00B6DB6B /* Build configuration list for PBXNativeTarget "FlickTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +590,7 @@
 				591F31141C55B07A00B6DB6B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		591F31151C55B07A00B6DB6B /* Build configuration list for PBXNativeTarget "FlickUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +599,7 @@
 				591F31171C55B07A00B6DB6B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
