@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'C57E8B4235E6B57807BBF19F'
+               BlueprintIdentifier = '0051279C0C317E65D3942342'
                BlueprintName = 'Pods-Flick'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods_Flick.framework'>
