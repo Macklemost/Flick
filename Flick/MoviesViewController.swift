@@ -10,7 +10,7 @@ import UIKit
 import AFNetworking
 import MBProgressHUD
 
-class MoviesViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class MoviesViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate{
     
     @IBOutlet weak var CollectionView: UICollectionView!
     
@@ -18,13 +18,15 @@ class MoviesViewController: UIViewController, UICollectionViewDataSource, UIColl
     let refreshControl = UIRefreshControl()
     let request = NSURLRequest()
 
+    var filteredMovies: [NSDictionary]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-       
+        
         refreshControl.addTarget(self, action: "refreshControlAction:", forControlEvents: UIControlEvents.ValueChanged)
         CollectionView.insertSubview(refreshControl, atIndex: 0)
         
+        networkRequest()
         
         CollectionView.dataSource = self
         CollectionView.delegate = self
@@ -62,7 +64,7 @@ class MoviesViewController: UIViewController, UICollectionViewDataSource, UIColl
                         data, options:[]) as? NSDictionary {
                             print("response: \(responseDictionary)")
                             
-                            self.movies = responseDictionary["results"] as! [NSDictionary]
+                            self.movies = responseDictionary["results"] as? [NSDictionary]
                             self.CollectionView.reloadData()
                             
                     }
@@ -75,6 +77,7 @@ class MoviesViewController: UIViewController, UICollectionViewDataSource, UIColl
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         if let movies = movies {
@@ -93,17 +96,23 @@ class MoviesViewController: UIViewController, UICollectionViewDataSource, UIColl
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = CollectionView.dequeueReusableCellWithReuseIdentifier("CollectionMovieCell", forIndexPath: indexPath) as! CollectionMovieCell
         
-        
+        let missingURL = "http://www.fm104.ie/getmedia/f90ffab1-df0f-4190-9700-a27ef9d12171/coming-soon.jpg?maxsidesize=0"
         let movie = movies![indexPath.row]
         let title = movie["title"] as! String
         let overview = movie["overview"] as! String
         let baseUrl = "http://image.tmdb.org/t/p/w500"
-        let posterPath = movie["poster_path"] as! String
+        var imageUrl = NSURL()
+        if movie["poster_path"] is NSNull {
+            imageUrl = NSURL(string: missingURL)!
+        } else {
+            let posterPath = movie["poster_path"] as! String
         
-        let imageUrl = NSURL(string: baseUrl + posterPath)
-        cell.posterView.setImageWithURL(imageUrl!)
-        cell.titleLabel.text = title
-        cell.overviewLabel.text = overview
+            imageUrl = NSURL(string: baseUrl + posterPath)!
+        }
+        cell.posterView.setImageWithURL(imageUrl)
+        cell.posterView.alpha = 0.0
+        UIView.animateWithDuration(1.1, animations: { () -> Void in
+            cell.posterView.alpha = 1.0})
         return cell
 
     }
