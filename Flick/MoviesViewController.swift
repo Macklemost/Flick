@@ -17,8 +17,7 @@ class MoviesViewController: UIViewController, UICollectionViewDataSource, UIColl
     var movies: [NSDictionary]?
     let refreshControl = UIRefreshControl()
     let request = NSURLRequest()
-
-    var filteredMovies: [NSDictionary]?
+    var endpoint: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,9 +38,9 @@ class MoviesViewController: UIViewController, UICollectionViewDataSource, UIColl
     
     
     func networkRequest(){
-        
+    
         let apiKey = "a07e22bc18f5cb106bfe4cc1f83ad8ed"
-        let url = NSURL(string: "https://api.themoviedb.org/3/movie/now_playing?api_key=\(apiKey)")
+        let url = NSURL(string: "https://api.themoviedb.org/3/movie/\(endpoint)?api_key=\(apiKey)")
         let request = NSURLRequest(
             URL: url!,
             cachePolicy: NSURLRequestCachePolicy.ReloadIgnoringLocalCacheData,
@@ -114,23 +113,30 @@ class MoviesViewController: UIViewController, UICollectionViewDataSource, UIColl
         UIView.animateWithDuration(1.1, animations: { () -> Void in
             cell.posterView.alpha = 1.0})
         return cell
-
     }
-}
+
     
 
 
 
-    /*
+
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        let cell = sender as! UICollectionViewCell
+        let indexPath = CollectionView.indexPathForCell(cell)
+        let movie = movies![indexPath!.row]
+        
+        let detailViewController = segue.destinationViewController as! DetailViewController
+        detailViewController.movie = movie
+        
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
 
 
+}
 
 
