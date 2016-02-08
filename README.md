@@ -2,7 +2,7 @@
 
 Flick is a movies app using the [The Movie Database API](http://docs.themoviedb.apiary.io/#).
 
-Time spent: 11 hours spent in total
+Time spent: 18 hours spent in total
 
 ## User Stories
 
@@ -14,16 +14,16 @@ The following **required** functionality is complete:
 - [X] User can pull to refresh the movie list.
 - [X] User can view movie details by tapping on a cell.
 - [X] User can select from a tab bar for either **Now Playing** or **Top Rated** movies.
-- [ ] Customize the selection effect of the cell.
-- 
+- [X] Customize the selection effect of the cell.
+
 The following **optional** features are implemented:
 
 - [ ] User sees an error message when there's a networking error.
 - [X] Movies are displayed using a CollectionView instead of a TableView.
-- [ ] User can search for a movie.
+- [X] User can search for a movie.
 - [X] All images fade in as they are loading.
 - [ ] Customize the UI.
-- [ ] For the large poster, load the low resolution image first and then switch to the high resolution image when complete.
+- [X] For the large poster, load the low resolution image first and then switch to the high resolution image when complete.
 - [ ] Customize the navigation bar.
 
 The following **additional** features are implemented:
@@ -39,7 +39,7 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/lAIYmzH.gif' title='Flick Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://i.imgur.com/FYS6z0H.gif' title='Flick Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
